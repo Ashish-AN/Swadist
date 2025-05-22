@@ -1,0 +1,60 @@
+.dashboard-navbar {
+  background-color: linear-gradient(to right, #ffe9cc, #fff5e1);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+}
+
+.swadist-logo {
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/hero.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e26a00;
+}
+.nav-link {
+  font-weight: 500;
+  color: #333;
+  margin-left: 1rem;
+}
+.nav-link:hover {
+  background-color: #e26a00;
+  color: #fff;
+}
+
+.nav-link.active {
+  color: #e67e22;
+  font-weight: bold;
+  border-bottom: 2px solid #e67e22;
+}
+.navbar-toggler {
+  border: none;
+}
+.search-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-btn {
+  background-color: #e26a00;
+  border: none;
+}
+.search-btn:hover {
+  background-color: #d95f00;
+}
+.profile-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.footer {
+  background-color: #fff8dc;
+  color: #3c763d;
+  border-top: 1px solid #eee;
+}

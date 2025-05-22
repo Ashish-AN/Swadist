@@ -1,0 +1,18 @@
+.page-not-found {
+  background-image: url("../assets/page-not-found.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff6e6;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.go-back-btn {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}

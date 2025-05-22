@@ -1,0 +1,8 @@
+.cart-empty {
+  background-image: url("../assets/cart-empty.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+}

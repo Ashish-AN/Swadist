@@ -1,0 +1,35 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-card {
+  background-color: #fff8dc;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border: none;
+}
+.register-logo {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 0 auto;
+  background-image: url("../assets/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-link {
+  margin-top: 15px;
+  color: #3c763d;
+}
+
+.login-link a {
+  color: #e37000;
+  font-weight: bold;
+  text-decoration: none;
+}

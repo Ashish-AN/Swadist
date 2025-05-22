@@ -1,0 +1,11 @@
+.no-result {
+  background-image: url("../assets/result-not-found.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  width: 100%;
+}

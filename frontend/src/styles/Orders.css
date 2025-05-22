@@ -1,0 +1,11 @@
+.orders-not-found {
+  background-image: url("../assets/orders-not-found.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}

@@ -1,0 +1,37 @@
+.restaurant-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+}
+.restaurant-image.burger-world {
+  background-image: url("../assets/res-1.jpg");
+}
+
+.restaurant-image.spice-vilia {
+  background-image: url("../assets/res-2.jpg");
+}
+
+.restaurant-image.tokyo-bites {
+  background-image: url("../assets/res-3.jpg");
+}
+.restaurant-image.la-pasta-bella {
+  background-image: url("../assets/res-4.jpg");
+}
+.restaurant-image.taco-loco {
+  background-image: url("../assets/res-5.jpg");
+}
+.restaurant-image.dragon-wok {
+  background-image: url("../assets/res-6.jpg");
+}
+.restaurant-image.green-earth-cafe {
+  background-image: url("../assets/res-7.jpg");
+}
+.restaurant-image.the-curry-house {
+  background-image: url("../assets/res-8.jpg");
+}
+.restaurant-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}

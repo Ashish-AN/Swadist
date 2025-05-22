@@ -1,0 +1,52 @@
+.restaurant-detail-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.restaurant-header h2 {
+  color: #e37000;
+  font-weight: 600;
+}
+
+.dish-card {
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
+}
+
+.dish-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.dish-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-image: url("/images/sample-dish.jpg"); 
+}
+
+.price {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.veg {
+  color: green;
+}
+
+.non-veg {
+  color: #8b0000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

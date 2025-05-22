@@ -1,0 +1,55 @@
+.dish-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.dish-image.cheesy-chicken-burger {
+  background-image: url("../assets/dish-1.jpg");
+}
+.dish-image.crispy-veg-burger {
+  background-image: url("../assets/dish-2.jpeg");
+}
+.dish-image.paneer-butter-masala {
+  background-image: url("../assets/dish-3.jpg");
+}
+.dish-image.chicken-tikka-masala {
+  background-image: url("../assets/dish-4.jpg");
+}
+.dish-image.sushi-platter {
+  background-image: url("../assets/dish-5.jpg");
+}
+.dish-image.veg-ramen-bowl {
+  background-image: url("../assets/dish-6.jpg");
+}
+.dish-image.spaghetti-alfredo {
+  background-image: url("../assets/dish-7.jpg");
+}
+.dish-image.chicken-lasagna {
+  background-image: url("../assets/dish-8.jpg");
+}
+.dish-image.cheesy-nachos {
+  background-image: url("../assets/dish-9.jpg");
+}
+.dish-image.spicy-chicken-tacos {
+  background-image: url("../assets/dish-10.jpg");
+}
+.dish-image.chilli-garlic-noodles {
+  background-image: url("../assets/dish-11.jpg");
+}
+.dish-image.chicken-manchurian {
+  background-image: url("../assets/dish-12.jpg");
+}
+.dish-image.vegan-buddha-bowl {
+  background-image: url("../assets/dish-13.jpg");
+}
+.dish-image.tofu-stir-fry {
+  background-image: url("../assets/dish-14.jpg");
+}
+.dish-image.butter-chicken {
+  background-image: url("../assets/butter-chicken.jpg");
+}
+.dish-image.dal-makhani {
+  background-image: url("../assets/dish-15.jpg");
+}
