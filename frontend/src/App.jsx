@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import RestaurantDetail from "./pages/RestaurantDetail";
 import SearchResults from "./pages/SearchResults";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/CheckOut";
+import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
 import Support from "./pages/Support";
 import Profile from "./pages/Profile";
