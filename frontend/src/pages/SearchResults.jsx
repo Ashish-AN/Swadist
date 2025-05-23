@@ -20,8 +20,8 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       const [resRes, dishRes] = await Promise.all([
-        axios.get("http://localhost:9090/api/restaurants"),
-        axios.get("http://localhost:9090/api/dishes"),
+        axios.get("https://swadist.onrender.com/api/restaurants"),
+        axios.get("https://swadist.onrender.com/api/dishes"),
       ]);
       const resFiltered = resRes.data.filter((r) =>
         r.name.toLowerCase().includes(query.toLowerCase())

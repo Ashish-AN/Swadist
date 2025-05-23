@@ -18,7 +18,10 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:9090/api/login", formData);
+      const res = await axios.post(
+        "https://swadist.onrender.com/api/login",
+        formData
+      );
       const user = {
         name: res.data.name,
         email: res.data.email,

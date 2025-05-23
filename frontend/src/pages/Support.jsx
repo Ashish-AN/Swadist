@@ -89,7 +89,7 @@ const Support = () => {
     const isFeedback = selectedTopic?.id === "feedback";
 
     try {
-      await axios.post("http://localhost:9090/api/support/messages", {
+      await axios.post("https://swadist.onrender.com/api/support/messages", {
         topic: selectedTopic.title,
         type: isFeedback ? "feedback" : "issue",
         name,

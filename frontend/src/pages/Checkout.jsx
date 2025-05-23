@@ -34,10 +34,10 @@ function Checkout() {
     }
 
     axios
-      .get(`http://localhost:9090/api/cart/${user.userId}`)
+      .get(`https://swadist.onrender.com/api/cart/${user.userId}`)
       .then((res) => setCart(res.data.items || []));
     axios
-      .get(`http://localhost:9090/api/cart/${user.userId}/total`)
+      .get(`https://swadist.onrender.com/api/cart/${user.userId}/total`)
       .then((res) => setTotal(res.data.totalPrice || 0));
   }, [user.userId]);
 
@@ -47,7 +47,7 @@ function Checkout() {
   const handlePayment = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:9090/api/payment/create-order",
+        "https://swadist.onrender.com/api/payment/create-order",
         {
           amount: total + shippingCharge,
         }
@@ -100,7 +100,7 @@ function Checkout() {
     }
 
     try {
-      await axios.post("http://localhost:9090/api/orders", {
+      await axios.post("https://swadist.onrender.com/api/orders", {
         userId: user.userId,
         ...form,
         items: cart,
@@ -108,7 +108,9 @@ function Checkout() {
         ...paymentDetails,
       });
 
-      await axios.delete(`http://localhost:9090/api/cart/${user.userId}`);
+      await axios.delete(
+        `https://swadist.onrender.com/api/cart/${user.userId}`
+      );
       setCart([]);
       setCartQty(0);
       localStorage.removeItem("swadist_payment");

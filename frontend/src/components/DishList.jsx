@@ -17,7 +17,7 @@ function DishList({ dishes: propDishes = [] }) {
   useEffect(() => {
     if (useFetched) {
       axios
-        .get("http://localhost:9090/api/dishes")
+        .get("https://swadist.onrender.com/api/dishes")
         .then((res) => setDishes(res.data))
         .catch((err) => console.error("Failed to fetch dishes", err));
     }
@@ -46,7 +46,7 @@ function DishList({ dishes: propDishes = [] }) {
         : dish.restaurantId;
 
     try {
-      await axios.post("http://localhost:9090/api/cart", {
+      await axios.post("https://swadist.onrender.com/api/cart", {
         userId: user.userId,
         restaurantId,
         dishId: dish._id,
@@ -54,7 +54,7 @@ function DishList({ dishes: propDishes = [] }) {
         price,
       });
       const res = await axios.get(
-        `http://localhost:9090/api/cart/${user.userId}`
+        `https://swadist.onrender.com/api/cart/${user.userId}`
       );
       const items = res.data.items || [];
       const totalQty = items.reduce((sum, item) => sum + item.quantity, 0);

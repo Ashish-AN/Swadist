@@ -13,7 +13,7 @@ function RestaurantList({ restaurants: propRestaurants = [] }) {
   useEffect(() => {
     if (useFetched) {
       axios
-        .get("http://localhost:9090/api/restaurants")
+        .get("https://swadist.onrender.com/api/restaurants")
         .then((res) => setRestaurants(res.data))
         .catch((err) => console.error("Failed to fetch restaurants", err));
     }

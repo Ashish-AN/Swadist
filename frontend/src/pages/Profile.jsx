@@ -37,7 +37,7 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9090/api/users/${user.userId}`)
+      .get(`https://swadist.onrender.com/api/users/${user.userId}`)
       .then((res) => {
         setUserData(res.data);
         setForm({
@@ -84,7 +84,7 @@ function Profile() {
     });
     try {
       await axios.put(
-        `http://localhost:9090/api/users/${user.userId}`,
+        `https://swadist.onrender.com/api/users/${user.userId}`,
         formData
       );
       setAlert({ message: "Profile updated successfully", variant: "success" });
@@ -101,7 +101,9 @@ function Profile() {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete your account?")) {
       try {
-        await axios.delete(`http://localhost:9090/api/users/${user.userId}`);
+        await axios.delete(
+          `https://swadist.onrender.com/api/users/${user.userId}`
+        );
         localStorage.clear();
         window.location.href = "/";
       } catch (err) {
@@ -118,7 +120,7 @@ function Profile() {
     }
     try {
       await axios.put(
-        `http://localhost:9090/api/users/${user.userId}/change-password`,
+        `https://swadist.onrender.com/api/users/${user.userId}/change-password`,
         {
           currentPassword: passwordForm.currentPassword,
           newPassword: passwordForm.newPassword,
@@ -173,7 +175,7 @@ function Profile() {
         <div className="d-flex justify-content-center mb-4">
           {form.profilePic && typeof form.profilePic === "string" ? (
             <Image
-              src={`http://localhost:9090/uploads/${form.profilePic}`}
+              src={`https://swadist.onrender.com/uploads/${form.profilePic}`}
               roundedCircle
               width={100}
               height={100}

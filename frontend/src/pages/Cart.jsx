@@ -21,8 +21,10 @@ function Cart() {
       const fetchCart = async () => {
         try {
           const [cartRes, totalRes] = await Promise.all([
-            axios.get(`http://localhost:9090/api/cart/${user.userId}`),
-            axios.get(`http://localhost:9090/api/cart/${user.userId}/total`),
+            axios.get(`https://swadist.onrender.com/api/cart/${user.userId}`),
+            axios.get(
+              `https://swadist.onrender.com/api/cart/${user.userId}/total`
+            ),
           ]);
           const items = cartRes.data.items || [];
           setCartItems(items);
@@ -59,7 +61,7 @@ function Cart() {
         };
       });
 
-      await axios.put(`http://localhost:9090/api/cart/${user.userId}`, {
+      await axios.put(`https://swadist.onrender.com/api/cart/${user.userId}`, {
         items: updatedItems,
       });
 
@@ -90,7 +92,7 @@ function Cart() {
         (item) => item.dishId._id !== dishId
       );
 
-      await axios.put(`http://localhost:9090/api/cart/${user.userId}`, {
+      await axios.put(`https://swadist.onrender.com/api/cart/${user.userId}`, {
         items: updatedItems.map((item) => {
           const rawPrice = item.dishId?.price;
           const price =
@@ -130,7 +132,9 @@ function Cart() {
 
   const clearCart = async () => {
     try {
-      await axios.delete(`http://localhost:9090/api/cart/${user.userId}`);
+      await axios.delete(
+        `https://swadist.onrender.com/api/cart/${user.userId}`
+      );
       setCartItems([]);
       setTotal(0);
       setCartQty(0);

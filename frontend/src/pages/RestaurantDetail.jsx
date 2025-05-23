@@ -32,7 +32,7 @@ function RestaurantDetail() {
         : dish.restaurantId;
 
     try {
-      await axios.post("http://localhost:9090/api/cart", {
+      await axios.post("https://swadist.onrender.com/api/cart", {
         userId: user.userId,
         restaurantId,
         dishId: dish._id,
@@ -40,7 +40,7 @@ function RestaurantDetail() {
         price,
       });
       const res = await axios.get(
-        `http://localhost:9090/api/cart/${user.userId}`
+        `https://swadist.onrender.com/api/cart/${user.userId}`
       );
       const items = res.data.items || [];
       const totalQty = items.reduce((sum, item) => sum + item.quantity, 0);
@@ -56,7 +56,7 @@ function RestaurantDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9090/api/dishes?restaurantId=${id}`)
+      .get(`https://swadist.onrender.com/api/dishes?restaurantId=${id}`)
       .then((res) => {
         setDishes(res.data);
       })
@@ -64,7 +64,7 @@ function RestaurantDetail() {
       .catch((err) => console.error(err));
 
     axios
-      .get(`http://localhost:9090/api/restaurants/${id}`)
+      .get(`https://swadist.onrender.com/api/restaurants/${id}`)
       .then((res) => setRestaurant(res.data))
       .catch((err) => console.error(err));
   }, [id]);

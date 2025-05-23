@@ -29,7 +29,7 @@ function Register() {
         return;
       }
       const res = await axios.post(
-        "http://localhost:9090/api/register",
+        "https://swadist.onrender.com/api/register",
         formData
       );
 

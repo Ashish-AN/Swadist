@@ -42,12 +42,12 @@ function Dashboard() {
     setUser(parsedUser);
 
     axios
-      .get("http://localhost:9090/api/restaurants")
+      .get("https://swadist.onrender.com/api/restaurants")
       .then((response) => setRestaurants(response.data))
       .catch((error) => console.error("Failed to fetch restaurants:", error));
     if (parsedUser) {
       axios
-        .get(`http://localhost:9090/api/cart/${parsedUser.userId}`)
+        .get(`https://swadist.onrender.com/api/cart/${parsedUser.userId}`)
         .then((res) => {
           const items = res.data.items || [];
           const totalQty = items.reduce((sum, item) => sum + item.quantity, 0);

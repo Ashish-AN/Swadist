@@ -25,7 +25,7 @@ function Orders() {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:9090/api/orders/${user.userId}`
+        `https://swadist.onrender.com/api/orders/${user.userId}`
       );
       const sorted = res.data.sort(
         (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
@@ -44,7 +44,9 @@ function Orders() {
     if (!window.confirm("Are you sure you want to cancel this order?")) return;
 
     try {
-      await axios.put(`http://localhost:9090/api/orders/${orderId}/cancel`);
+      await axios.put(
+        `https://swadist.onrender.com/api/orders/${orderId}/cancel`
+      );
       fetchOrders();
     } catch (err) {
       console.error("Error cancelling order:", err);
@@ -116,7 +118,7 @@ function Orders() {
 
   const applyDateFilter = () => {
     axios
-      .get(`http://localhost:9090/api/orders/${user.userId}`)
+      .get(`https://swadist.onrender.com/api/orders/${user.userId}`)
       .then((res) => {
         let filtered = res.data;
         if (startDate) {
